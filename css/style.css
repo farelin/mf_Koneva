@@ -76,11 +76,23 @@ header, footer {
   background-image: url('../images/promo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 0 7%;
   text-align: center;
+}
+
+.promo .col12 {
+  padding-top: 180px;
+  padding-bottom: 50px;
 }
 
 .promo h1 {
   color: #fff;
   font-size: 66px;
   margin-bottom: 150px;
+}
+
+.promo a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
 }
