@@ -2,8 +2,24 @@ body {
   min-width: 1240px;
   font-family: Roboto, sans-serif;
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.2;
   background-color: #fff;
+  color: #444;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h2:after {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 62px;
+  background-color: #3e98d7;
+  margin-top: 15px;
+  margin-bottom: 50px;
 }
 
  a {
@@ -82,17 +98,100 @@ header, footer {
 
 .promo .col12 {
   padding-top: 180px;
-  padding-bottom: 50px;
+  padding-bottom: 93px;
 }
 
 .promo h1 {
   color: #fff;
   font-size: 66px;
-  margin-bottom: 150px;
+  margin-bottom: 160px;
 }
 
 .promo a {
   color: #fff;
   border: 1px solid #fff;
   padding: 10px;
+  position: relative;
+}
+
+.promo a:after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 29px;
+  background-image: url('../images/arrow.gif');
+  margin: auto;
+  position: absolute;
+  top: 70px;
+  left: 45px;
+}
+
+.advantages {
+  margin-top: 85px;
+  margin-bottom: 100px;
+}
+
+.advantages span {
+  font-weight: bold;
+}
+
+.advantages .col3 {
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+
+.advantages .col3:nth-child(1) {
+  background-image: url('../images/like.gif');
+  padding-left: 80px;
+}
+
+.advantages .col3:nth-child(2) {
+  background-image: url('../images/glasses.gif');
+  padding-left: 100px;
+}
+
+.advantages .col3:nth-child(3) {
+  background-image: url('../images/camera.gif');
+  padding-left: 90px;
+  padding-right: 20px;
+}
+
+.advantages .col3:nth-child(4) {
+  background-image: url('../images/binoculars.gif');
+  padding-left: 95px;
+  padding-right: 25px;
+}
+
+.intro iframe {
+  box-shadow: 0px 30px 0 -20px #e6e6e6;
+}
+
+.intro .line:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 85px;
+  margin-bottom: 100px;
+}
+
+.gallery h2, .flight-plan-title h2 {
+  text-align: center;
+}
+
+.gallery h2:after, .flight-plan-title h2:after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flight-plan-title h2 {
+  margin-bottom: 70px;
+}
+
+.flight-plan {
+  background-image: url('../images/flight-plan.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 513px;
 }
