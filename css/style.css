@@ -176,13 +176,20 @@ header, footer {
   margin-bottom: 100px;
 }
 
-.gallery h2, .flight-plan-title h2 {
+.gallery-title h2, .flight-plan-title h2 {
   text-align: center;
 }
 
-.gallery h2:after, .flight-plan-title h2:after {
+.gallery-title h2:after, .flight-plan-title h2:after {
   margin-left: auto;
   margin-right: auto;
+}
+
+.gallery {
+  height: 320px;
+  width: 1050px;
+  margin: 0 auto;
+  padding-left: 15px;
 }
 
 .flight-plan-title h2 {
@@ -193,5 +200,79 @@ header, footer {
   background-image: url('../images/flight-plan.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  vertical-align: top;
+}
+
+.flight-plan .container {
+  background-image: url('../images/path.png');
+  background-repeat: no-repeat;
+  background-position: center;
   height: 513px;
+}
+
+.flight-plan [class^="col"]:nth-child(1) {
+  text-align: left;
+  padding-top: 200px;
+}
+
+.flight-plan [class^="col"]:nth-child(2) {
+  text-align: right;
+  padding-top: 130px;
+}
+
+.flight-plan [class^="col"]:nth-child(3) {
+  text-align: center;
+}
+
+.flight-plan [class^="col"]:nth-child(4) {
+  text-align: left;
+  padding-top: 152px;
+}
+
+.flight-plan [class^="col"]:nth-child(5) {
+  text-align: right;
+  padding-top: 200px;
+}
+
+.flight-plan-balloon {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+
+.flight-plan-balloon div:first-child {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.flight-plan-balloon div:last-child {
+  background-image: url('../images/balloon.png');
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 65px;
+  display: inline-block;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.flight-counter {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+  font-size: 32px;
+  color: #26668e;
+}
+
+.flight-counter .col7 {
+  text-align: right;
+}
+
+.flight-counter .col7 span {
+  font-size: 22px;
+  margin-right: 25px;
+}
+
+.flight-counter .col7 span:last-child {
+  margin-right: 0;
 }

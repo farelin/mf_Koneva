@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="slick/slick.css" />
+  <link rel="stylesheet" href="slick/slick-theme.css" />
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="slick/slick.min.js"></script>
 </head>
 <body>
   <header>
@@ -62,7 +67,7 @@
         </div>
       </div>
     </section>
-    <section class="gallery">
+    <div class="gallery-title">
       <div class="container">
         <div class="row">
           <div class="col12">
@@ -70,7 +75,17 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="gallery">
+      <div><img src="images/gallery1.jpg" alt=""></div>
+      <div><img src="images/gallery2.jpg" alt=""></div>
+      <div><img src="images/gallery3.jpg" alt=""></div>
+      <div><img src="images/gallery4.jpg" alt=""></div>
+      <div><img src="images/gallery1.jpg" alt=""></div>
+      <div><img src="images/gallery2.jpg" alt=""></div>
+      <div><img src="images/gallery3.jpg" alt=""></div>
+      <div><img src="images/gallery4.jpg" alt=""></div>
+    </div>
     <div class="container flight-plan-title">
       <div class="row">
         <div class="col12">
@@ -82,31 +97,31 @@
       <div class="container">
         <div class="row">
           <div class="col2">
-            <div class="flight-plan-baloon">
+            <div class="flight-plan-balloon">
               <div>Взлет</div>
               <div>1</div>
             </div>
           </div>
           <div class="col2">
-            <div class="flight-plan-baloon">
+            <div class="flight-plan-balloon">
               <div>Набираем высоту</div>
               <div>2</div>
             </div>
           </div>
           <div class="col4">
-            <div class="flight-plan-baloon">
+            <div class="flight-plan-balloon">
               <div>Летаем</div>
               <div>3</div>
             </div>
           </div>
           <div class="col2">
-            <div class="flight-plan-baloon">
+            <div class="flight-plan-balloon">
               <div>Снижаемся</div>
               <div>4</div>
             </div>
           </div>
           <div class="col2">
-            <div class="flight-plan-baloon">
+            <div class="flight-plan-balloon">
               <div>Садимся</div>
               <div>5</div>
             </div>
@@ -117,7 +132,7 @@
     <div class="flight-counter">
       <div class="container">
         <div class="row">
-          <div class="col5"></div>
+          <div class="col5">До ближайшего полета:</div>
           <div class="col7"></div>
         </div>
       </div>
@@ -195,5 +210,24 @@
       </div>
     </div>
   </footer>
+  <script>
+    $(document).ready(function()
+    {
+      $('.gallery').slick({
+          infinite: true,
+          autoplay: false,
+          slidesToShow: 4,
+          slidesToScroll: 2
+      });
+
+      $('.flight-counter .col7').countdown('2015/12/31', function(event)
+      {
+        $(this).html(event.strftime(
+          '%-D <span>дней</span> %-H <span>часов</span> %-M <span>минут</span> %-S <span>секунд</span>'
+        ));
+      });
+
+    });
+  </script>
 </body>
 </html>
