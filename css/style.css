@@ -22,6 +22,11 @@ h2:after {
   margin-bottom: 50px;
 }
 
+h3 {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
  a {
   text-decoration: none;
  }
@@ -166,7 +171,7 @@ header, footer {
   box-shadow: 0px 30px 0 -20px #e6e6e6;
 }
 
-.intro .line:after {
+.intro .line:after, .price .line:after {
   content: '';
   display: block;
   width: 100%;
@@ -176,11 +181,11 @@ header, footer {
   margin-bottom: 100px;
 }
 
-.gallery-title h2, .flight-plan-title h2 {
+.gallery-title h2, .flight-plan-title h2, .team-title h2, .reviews-title h2 {
   text-align: center;
 }
 
-.gallery-title h2:after, .flight-plan-title h2:after {
+.gallery-title h2:after, .flight-plan-title h2:after, .team-title h2:after, .reviews-title h2:after {
   margin-left: auto;
   margin-right: auto;
 }
@@ -275,4 +280,320 @@ header, footer {
 
 .flight-counter .col7 span:last-child {
   margin-right: 0;
+}
+
+.price {
+  margin-top: 60px;
+}
+
+.price .line:after {
+  margin-bottom: 60px;
+}
+
+.price form label {
+  width: 200px;
+}
+
+.price form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.price form input, .price form select {
+  width: 350px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #444;
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+.price form label, .price form input, .price form select {
+  display: inline-block;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+#price-path, #price-quantity, #price-name, #price-phone {
+  padding: 0 30px;
+  color: #444;
+}
+
+#price-path, #price-quantity {
+  background-image: url('../images/form-arrows.png');
+  background-repeat: no-repeat;
+  background-position: 330px 8px;
+}
+
+#price-name {
+  background-image: url('../images/form-person.png');
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  padding-left: 35px;
+}
+
+#price-phone {
+  background-image: url('../images/form-phone.png');
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
+  padding-left: 35px;
+}
+
+.price form .price-price {
+  margin-top: 20px;
+  float: left;
+}
+
+.price form .price-price span {
+  font-size: 38px;
+  color: #f97e7e;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+.price form a {
+  float: right;
+  color: white;
+  background-color: #46b0dc;
+  border-radius: 5px;
+  padding: 10px 45px;
+  margin-top: 20px;
+}
+
+.payment h3 {
+  font-size: 26px;
+}
+
+.payment p {
+  margin-top: 25px;
+}
+
+.questions h3 {
+  font-size: 18px;
+}
+
+.questions h3:before {
+  content: '';
+  display: inline-block;
+  background-image: url('../images/question.png');
+  width: 40px;
+  height: 34px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.questions p {
+font-size: 16px;
+margin-top: 15px;
+margin-left: 75px;
+}
+
+.statistics {
+  background-image: url('../images/sky.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 370px;
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+
+.statistics .col3 {
+  height: 370px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.statistics .col10 {
+  padding: 0;
+}
+
+.statistics .statistic div:first-child {
+  border: 7px solid white;
+  width: 150px;
+  height: 150px;
+  font-size: 42px;
+  border-radius: 50%;
+  padding-top: 45px;
+  margin-top: 70px;
+  box-sizing: border-box;
+}
+
+.statistics .statistic div:last-child {
+  font-size: 22px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.statistics .statistic div {
+  display: inline-block;
+  color: white;
+}
+
+.team-title h2:after {
+  margin-bottom: 30px;
+}
+
+.instructors {
+  margin-bottom: 70px;
+}
+
+.instructors .col3 {
+  text-align: center;
+}
+
+.instructors .col3 img {
+  border-radius: 50%;
+}
+
+.instructors .col3 p {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.instructors .col3 p:last-child {
+  font-size: 18px;
+  margin-top: 0px;
+}
+
+.reviews {
+  margin-bottom: 80px;
+}
+
+.reviews .col6 {
+  text-align: center;
+}
+
+.reviews .col6 img {
+  border-radius: 50%;
+}
+
+.reviews .col6 p {
+  font-size: 22px;
+  margin-top: 22px;
+}
+
+.reviews .col6 blockquote {
+  margin-top: 22px;
+}
+
+.reviews-title h2:after {
+  margin-bottom: 30px;
+}
+
+.contacts {
+  background-image: url('../images/sky2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts [class^="col"] {
+  vertical-align: top;
+}
+
+.contacts .contacts-address {
+  text-align: center;
+  padding: 0;
+}
+
+.contacts .col2, contacts .col4, .contacts .col10
+{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.contacts .contacts-address img {
+  box-sizing: border-box;
+  margin-top: 50px;
+  border-radius: 5px;
+  background-color: #337ba0;
+  width: 50px;
+  height: 50px;
+  padding: 7px;
+  margin-bottom: 30px;
+}
+
+.contacts .contacts-address p:nth-child(2) {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.contacts .contacts-address p:last-child {
+  color: #616161;
+}
+
+.contacts .row:nth-child(2) {
+  padding: 60px 0;
+}
+
+.contacts .contacts-icon {
+  background-image: url('../images/icon-mark.png');
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 50px;
+}
+
+.contacts .contact-office p:nth-child(1) {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contacts .contact-office p:nth-child(2) {
+  font-size: 22px;
+  color: #616161;
+  margin-bottom: 10px;
+}
+
+.contacts .contact-office p:nth-child(3) {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.contacts .contacts-email, .contacts-icon-fb, .contacts-icon-vk, .contacts-icon-inst {
+    display: block;
+}
+
+.contacts .contacts-email {
+  text-decoration: underline;
+  font-size: 22px;
+  color: #444;
+}
+
+.contacts .contacts-email:before {
+  content: '';
+  display: inline-block;
+  background-image: url('../images/icon-email.png');
+  width: 23px;
+  height: 17px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.contacts .contacts-icon-fb {
+  background-image: url('../images/icon-fb.png');
+}
+
+.contacts .contacts-icon-vk {
+  background-image: url('../images/icon-vk.png');
+}
+
+.contacts .contacts-icon-inst {
+  background-image: url('../images/icon-inst.png');
+}
+
+.contacts-icon-fb, .contacts-icon-vk, .contacts-icon-inst {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+
+#top-button {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  color: #FF0000;
 }

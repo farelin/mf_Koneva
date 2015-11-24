@@ -22,12 +22,12 @@
         <div class="col9">
           <nav>
             <ul>
-              <li><a href="#">Кто мы</a></li>
-              <li><a href="#">Фотографии</a></li>
-              <li><a href="#">План полета</a></li>
-              <li><a href="#">Заказать</a></li>
-              <li><a href="#">Команда</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#who-are-we">Кто мы</a></li>
+              <li><a href="#photo">Фотографии</a></li>
+              <li><a href="#flight-plan">План полета</a></li>
+              <li><a href="#to-order">Заказать</a></li>
+              <li><a href="#command">Команда</a></li>
+              <li><a href="#contacts">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -40,7 +40,7 @@
         <div class="row">
           <div class="col12">
             <h1>Организация полетов<br />на воздушных шарах</h1>
-            <a href="#">Подробнее</a>
+            <a href="#who-are-we">Подробнее</a>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
         <div class="col3"><span>Потрясающие виды</span></div>
       </div>
     </div>
-    <section class="intro">
+    <section class="intro" id="who-are-we">
       <div class="container line">
         <div class="row">
           <div class="col4">
@@ -67,7 +67,7 @@
         </div>
       </div>
     </section>
-    <div class="gallery-title">
+    <div class="gallery-title" id="photo">
       <div class="container">
         <div class="row">
           <div class="col12">
@@ -86,7 +86,7 @@
       <div><img src="images/gallery3.jpg" alt=""></div>
       <div><img src="images/gallery4.jpg" alt=""></div>
     </div>
-    <div class="container flight-plan-title">
+    <div class="container flight-plan-title" id="flight-plan">
       <div class="row">
         <div class="col12">
           <h2>Как проходят полеты</h2>
@@ -137,18 +137,65 @@
         </div>
       </div>
     </div>
-    <section class="price">
-      <div class="container">
+    <section class="price" id="to-order">
+      <div class="container line">
         <div class="row">
-          <div class="col5"></div>
-          <div class="col7"></div>
+          <div class="col5">
+            <h2>Расчитать стоимость</h2>
+            <p>Итак, в назначенное время вы приехали на место полета. Команда уже готовит шар к полету - определяется направление ветра, запускаются горелки.</p><br />
+            <p>Оболочка начинает заполняться теплым воздухом, и аэростат делает первый «вздох».</p><br />
+            <p>Выбирайте, куда мы полетим сегодня!</p>
+          </div>
+          <div class="col1"></div>
+          <div class="col6">
+            <form method="post">
+              <label for="price-path">Маршрут полета:</label>
+              <select id="price-path">
+                <option>Сестрорецк - Парнас</option>
+                <option>Царское село - Павловск</option>
+              </select>
+              <label for="price-quantity">Количество человек:</label>
+              <select id="price-quantity" onchange="$('.price-price span').text(4500*$('#price-quantity').val()+' P')">
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+              <label for="price-name">Имя и фамилия:</label>
+              <input id="price-name" placeholder="Имя и фамилия" type="text" />
+              <label for="price-phone">Телефон:</label>
+              <input id="price-phone" placeholder="89215674566" type="text" />
+              <div class="price-price">Стоимость:<span>9000 Р</span></div>
+              <a href="#">Полетели!</a>
+            </form>
+          </div>
         </div>
       </div>
     </section>
     <div class="container">
       <div class="row">
-        <div class="col6"></div>
-        <div class="col6"></div>
+        <div class="col5 payment">
+          <h2>Способы оплаты</h2>
+          <h3>Наличными</h3>
+          <p>Вы можете оплатить услугу,  приехав к нам в офис. Для этого Вам необходимо предупредить об этом:</p>
+          <p>— по телефону: +7 (812) 640-19-39<br />— или по почте: mnebyvnebo@gmail.com</p>
+          <p>Оплачивая услугу в офисе, Вы получаете все документы подтверждающие оплату.</p>
+          <h3>Курьеру</h3>
+          <p>Вы можете оплатить услугу в любом районе города и в удобное время, вызвав курьера. Для этого Вам необходимо связаться с нашими сотрудниками и сообщить об этом:</p>
+          <p>— по телефону: +7 (812) 640-19-39,<br />— или по почте: mnebyvnebo@gmail.com</p>
+          <p>Оплачивая услугу курьером, Вы получаете все документы подтверждающие оплату.</p>
+        </div>
+        <div class="col1"></div>
+        <div class="col6 questions">
+          <h2>Частые вопросы</h2>
+          <h3>Что взять с собой в полет?</h3>
+          <p>Обязательно возьмите с собой теплую одежду и немного вкусной еды, которую не нужно разогревать, а еще термос горячим чаем. А мы обязательно дадим вам теплые пледы</p>
+          <h3>Что если мы улетим не в ту сторону?</h3>
+          <p>Каждый шар оснащен датчиками GPS, и все его перемещения фиксируются с точностью до метра, потеряться просто не получится. А наши пилоты такой ситуации не допустят вообще</p>
+          <h3>Что делать, если в полете станет плохо?</h3>
+          <p>В наших аптечках заготовлены в больших количествах разные лекарства, в том числе средства от укачивания, пакетики, а каждый пилот прошел специальную подготовку по оказанию первой помощи. В экстренной ситуациях сразу же совершим посадку. Мы не дадим вам оказаться в беде</p>
+          <h3>А полет – это действительно так здорово?</h3>
+          <p>Это в тысячу раз лучше шоколада</p>
+        </div>
       </div>
     </div>
     <div class="statistics">
@@ -156,36 +203,128 @@
         <div class="row">
           <div class="col1"></div>
           <div class="col10">
-            <div class="col3"></div>
-            <div class="col3"></div>
-            <div class="col3"></div>
-            <div class="col3"></div>
+            <div class="col3 statistic">
+              <div>700</div>
+              <div>Полетов<br />в год</div>
+            </div>
+            <div class="col3 statistic">
+              <div>3000</div>
+              <div>Средняя<br />дальность в метрах</div>
+            </div>
+            <div class="col3 statistic">
+              <div>3</div>
+              <div>Воздушных<br />шара</div>
+            </div>
+            <div class="col3 statistic">
+              <div>12</div>
+              <div>Человек<br />в команде</div>
+            </div>
           </div>
           <div class="col1"></div>
         </div>
       </div>
     </div>
-    <section class="instructors">
+    <div class="team-title" id="command">
       <div class="container">
         <div class="row">
-          <div class="col3"></div>
-          <div class="col3"></div>
-          <div class="col3"></div>
-          <div class="col3"></div>
+          <div class="col12">
+            <h2>Команда инструкторов</h2>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="reviews">
+    </div>
+    <div class="instructors">
       <div class="container">
         <div class="row">
-          <div class="col6"></div>
-          <div class="col6"></div>
+          <div class="col3">
+            <img src="images/face1.jpg" alt="">
+            <p>Мария Мариева</p>
+            <p>Старший пилот</p>
+          </div>
+          <div class="col3">
+            <img src="images/face2.jpg" alt="">
+            <p>Надежда Надеждова</p>
+            <p>Второй пилот</p>
+          </div>
+          <div class="col3">
+            <img src="images/face3.jpg" alt="">
+            <p>Ирина Иринова</p>
+            <p>Авиадиспетчер</p>
+          </div>
+          <div class="col3">
+            <img src="images/face4.jpg" alt="">
+            <p>Алена Аленова</p>
+            <p>Авиатехник</p>
+          </div>
         </div>
       </div>
-    </section>
-    <div class="container">
-      <div class="row">
-        <div class="col12"></div>
+    </div>
+    <div class="reviews-title">
+      <div class="container">
+        <div class="row">
+          <div class="col12">
+            <h2>Отзывы</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews">
+      <div class="container">
+        <div class="row">
+          <div class="col6">
+            <img src="images/face5.jpg" alt="">
+            <p>Ольга Алексеева</p>
+            <blockquote>Оооо это было чудесно!!! Я не знала что воздушные шары такие огромные. Забавно, большой шар и маленькая корзинка. Полет восхитительный, выше всяких похвал. Мы побывали в самом красивом месте на Земле - в небе, оттуда открываются потрясающие виды.</blockquote>
+          </div>
+          <div class="col6">
+            <img src="images/face6.jpg" alt="">
+            <p>Артем Рыбкин</p>
+            <blockquote>Жене подарил полет на воздушном шаре. Сделал сюрприз на день рождения. Жена была в восторге, мне и самому понравилось, очень необычные ощущения от полета, хоть не самолет, а летит быстро, маршрут подобрали красивый. Cпасибо вам, нам все понравилось.</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contacts" id="contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col12 contacts-address">
+            <img src="images/icon-plane.png" alt="">
+            <p>Запишите адрес аэропорта</p>
+            <p>Всеволожск, улица Аэродромная 19а</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col4">
+            <div class="row">
+              <div class="col2">
+                <div class="contacts-icon"></div>
+              </div>
+              <div class="col10 contact-office">
+                <p>Наш офис в Питере:</p>
+                <p>Литейный 14б<br />12:00 - 19:00</p>
+                <p>746-67-33</p>
+              </div>
+            </div>
+          </div>
+          <div class="col4">
+            <div class="row">
+              <div class="col2">
+                <div class="contacts-icon"></div>
+              </div>
+              <div class="col10 contact-office">
+                <p>Наш офис во Всеволожске:</p>
+                <p>Аэродромная 19а<br />12:00 - 19:00</p>
+                <p>746-67-33</p>
+              </div>
+            </div>
+          </div>
+          <div class="col4">
+            <a href="mailto://mnebyvnebo@gmail.com" class="contacts-email">mnebyvnebo@gmail.com</a>
+            <a href="#" class="contacts-icon-fb"></a>
+            <a href="#" class="contacts-icon-vk"></a>
+            <a href="#" class="contacts-icon-inst"></a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -198,12 +337,12 @@
         <div class="col9">
           <nav>
             <ul>
-              <li><a href="#">Кто мы</a></li>
-              <li><a href="#">Фотографии</a></li>
-              <li><a href="#">План полета</a></li>
-              <li><a href="#">Заказать</a></li>
-              <li><a href="#">Команда</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#who-are-we">Кто мы</a></li>
+              <li><a href="#photo">Фотографии</a></li>
+              <li><a href="#flight-plan">План полета</a></li>
+              <li><a href="#to-order">Заказать</a></li>
+              <li><a href="#command">Команда</a></li>
+              <li><a href="#contacts">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -227,6 +366,33 @@
         ));
       });
 
+    });
+  </script>
+  <a href="" id="top-button">Наверх</a>
+  <script>
+    $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+    $('html,body').animate({
+    scrollTop: target.offset().top
+    }, 1000);
+    return false;
+    }
+    }
+    });
+    });
+
+    $('#top-button').css('opacity', '0')
+
+    $(function () {
+    var element = $("#top-button"), display;
+    $(window).scroll(function () {
+    display = $(this).scrollTop() >= 500;
+    display != element.css('opacity') && element.stop().animate({ 'opacity': display }, 250);
+    });
     });
   </script>
 </body>
