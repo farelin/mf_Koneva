@@ -237,24 +237,24 @@
       <div class="container">
         <div class="row">
           <div class="col3">
-            <img src="images/face1.jpg" alt="">
-            <p>Мария Мариева</p>
-            <p>Старший пилот</p>
+            <div class="photo photo1"></div>
+              <p>Мария Мариева</p>
+              <p>Старший пилот</p>
           </div>
           <div class="col3">
-            <img src="images/face2.jpg" alt="">
-            <p>Надежда Надеждова</p>
-            <p>Второй пилот</p>
+            <div class="photo photo2"></div>
+              <p>Надежда Надеждова</p>
+              <p>Второй пилот</p>
           </div>
           <div class="col3">
-            <img src="images/face3.jpg" alt="">
-            <p>Ирина Иринова</p>
-            <p>Авиадиспетчер</p>
+            <div class="photo photo3"></div>
+              <p>Ирина Иринова</p>
+              <p>Авиадиспетчер</p>
           </div>
           <div class="col3">
-            <img src="images/face4.jpg" alt="">
-            <p>Алена Аленова</p>
-            <p>Авиатехник</p>
+            <div class="photo photo4"></div>
+              <p>Алена Аленова</p>
+              <p>Авиатехник</p>
           </div>
         </div>
       </div>
@@ -368,24 +368,17 @@
 
     });
   </script>
-  <a href="" id="top-button">Наверх</a>
+  <a href="javascript:void(0)" id="top-button"><img src="images/button.png" /></a>
   <script>
     $(function() {
-    $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    if (target.length) {
-    $('html,body').animate({
-    scrollTop: target.offset().top
-    }, 4000);
-    return false;
-    }
-    }
-    });
+      $('#top-button').click(function() {
+        $('body').animate({
+          scrollTop: 0
+        }, 800);
+      });
     });
 
-    $('#top-button').css('opacity', '0')
+    $('#top-button').css('opacity', '0');
 
     $(function () {
     var element = $("#top-button"), display;

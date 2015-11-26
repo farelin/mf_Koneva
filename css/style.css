@@ -80,13 +80,13 @@ header, footer {
 
 .main-nav li {
   display: inline-block;
-  margin-left: 8px;
+  margin-left: 5px;
 }
 
 .main-nav .col9 a {
   color: #fff;
   border: 2px solid transparent;
-  padding: 5px;
+  padding: 6px 10px;
 }
 
 .main-nav .col9 a:hover {
@@ -298,6 +298,7 @@ header, footer {
 .price form select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  background-color: #fff;
 }
 
 .price form input, .price form select {
@@ -309,6 +310,7 @@ header, footer {
   color: #444;
   font-family: Roboto, sans-serif;
   box-sizing: border-box;
+  outline: none;
 }
 
 .price form label, .price form input, .price form select {
@@ -444,8 +446,35 @@ margin-left: 75px;
   text-align: center;
 }
 
-.instructors .col3 img {
+.instructors .photo {
+  background-repeat: no-repeat;
+  height: 165px;
+  width: 165px;
   border-radius: 50%;
+  margin: 0 auto;
+}
+
+.instructors .photo:hover {
+  background-image: url('../images/glasses-hover.png');
+  background-position: 50% 50%;
+  background-color: #474747;
+  cursor: pointer;
+}
+
+.instructors .photo1 {
+  background-image: url('../images/face1.jpg');
+}
+
+.instructors .photo2 {
+  background-image: url('../images/face2.jpg');
+}
+
+.instructors .photo3 {
+  background-image: url('../images/face3.jpg');
+}
+
+.instructors .photo4 {
+  background-image: url('../images/face4.jpg');
 }
 
 .instructors .col3 p {
@@ -594,7 +623,6 @@ margin-left: 75px;
 
 #top-button {
   position: fixed;
-  left: 50px;
-  bottom: 50px;
-  color: #FF0000;
+  right: 50px;
+  bottom: 20px;
 }
